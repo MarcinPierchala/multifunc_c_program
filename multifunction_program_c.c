@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 float calc();
 int menu();
@@ -51,7 +52,7 @@ int textCentering(){
   //na razie dobrze centruje tylko 1 wyraz 
   //każda spacja robi błąd
   typedef char* String;
-  int width;
+  int width =0;
   int size = 0;
   printf("PODAJ SZEROKOSC OKIENKA DO WYSWIETLANIA TEXTU : \n");
   scanf("%d", &width);
@@ -59,6 +60,7 @@ int textCentering(){
   printf("PODAJ TEXT DO WYŚRODKOWANIA : \n");
   scanf("%s", message);
   printf("WPISANO TEXT : %s\n", message);
+  printf("length of the inputed txt is : %d\n", (int)(strlen(message)));
   char* poi = message;
   while(*poi){
     size++;
